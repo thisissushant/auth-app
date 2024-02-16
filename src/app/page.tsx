@@ -2,7 +2,6 @@
 import * as React from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { ModeToggle } from "@/components/ui/toggle-mode";
-import { Button } from "@/components/ui/button";
 import { SignUp } from "@/app/signup/page";
 export default function Home() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
