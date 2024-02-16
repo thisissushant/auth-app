@@ -4,7 +4,10 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-export default function SignUp() {
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
+export function SignUp() {
   const router = useRouter();
   const [user, setUser] = React.useState({
     username: "",
@@ -38,7 +41,7 @@ export default function SignUp() {
     }
   }, [user]);
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-red-300">
+    <div className="flex flex-col items-center justify-center p-8 m-8 ">
       <h1 className="text-black-900">
         {loading ? "Processing..." : "Sign Up"}
       </h1>
@@ -46,8 +49,8 @@ export default function SignUp() {
       <label htmlFor="name" className="sr-only ">
         username
       </label>
-      <input
-        className="p-2 m-3 grid w-full max-w-sm items-center gap-1.5 border border-red-400 rounded-lg"
+      <Input
+        className="p-2 m-3 grid w-full max-w-sm items-center gap-1 border rounded-lg"
         id="username"
         type="text"
         value={user.username}
@@ -57,8 +60,8 @@ export default function SignUp() {
       <label htmlFor="name" className="sr-only ">
         email
       </label>
-      <input
-        className=" p-2 m-3 grid w-full max-w-sm items-center gap-1.5 border border-red-400 rounded-lg"
+      <Input
+        className=" p-2 m-3 grid w-full max-w-sm items-center gap-1 border  rounded-lg"
         id="email"
         type="text"
         value={user.email}
@@ -68,22 +71,22 @@ export default function SignUp() {
       <label htmlFor="name" className="sr-only ">
         password
       </label>
-      <input
-        className="p-2 m-3 grid w-full max-w-sm items-center gap-1.5 border border-red-400 rounded-lg"
+      <Input
+        className="p-2 m-3 grid w-full max-w-sm items-center gap-1 border "
         id="password"
         type="text"
         value={user.password}
         onChange={(e) => setUser({ ...user, password: e.target.value })}
         placeholder="Password"
       />
-      <button
+      <Button
         onClick={onSignup}
-        className="p-2 m-3 grid w-full max-w-sm items-center gap-1.5 border border-red-400 rounded-lg text-gray-700 hover:bg-red-400"
+        className="p-2 m-3 grid w-full max-w-sm items-center gap-1.5 border rounded-lg"
       >
         {buttonDisabled ? "Fill the above Information!" : "Sign Up"}
-      </button>
-      <Link href="/login" className="m-3 text-gray-600 hover:underline">
-        Login
+      </Button>
+      <Link href="/login" className="m-3  hover:text-green-500">
+        Already have an account Login
       </Link>
     </div>
   );

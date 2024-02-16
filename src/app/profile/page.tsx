@@ -14,7 +14,7 @@ export default function Profile() {
       toast.success("Logged out successfully");
       router.push("/login");
     } catch (error: any) {
-      toast.error(error.message);
+      toast.error("Unable to logout");
     }
   };
   const getUserDetails = async () => {
