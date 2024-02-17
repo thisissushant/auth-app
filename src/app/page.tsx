@@ -11,7 +11,7 @@ export default function Home() {
         <div className="flex justify-end m-4">
           <ModeToggle />
         </div>
-        <div className="flex justify-start ml-6  md:text-8xl text-5xl text-red-500 mt-8">
+        <div className="flex justify-start ml-6  md:text-8xl text-5xl text-red-500 mt-8 ">
           <h1>Authentication</h1>
         </div>
         <div className="flex  md:flex-row flex-col items-center justify-center md:space-x-6 space-y-0 ">

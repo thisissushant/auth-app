@@ -26,7 +26,7 @@ export default function Profile() {
       <h1>Profile</h1>
       <hr />
       <p>Profile Page</p>
-      <h2>
+      <h2 className="p-1 rounded bg-green-500">
         {data === "nothing" ? (
           "Nothing"
         ) : (
